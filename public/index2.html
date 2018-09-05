@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="./scripts/app-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="StickyTopBanner">
+            <ul class="CurrencyDropdown">
+                <li class="CurrencyDropdown--item"> GBP </li>
+                <li class="CurrencyDropdown--item"> SEK </li>
+                <li class="CurrencyDropdown--item"> DKK </li>
+                <li class="CurrencyDropdown--item"> EUR </li>
+            </ul>
+            <div class="userOption">
+                <a href="#" class="userOption--register">Register</a>
+                <a href="#" class="userOption--login">Sign In</a>
+            </div>
+            <div class="minibasket-button">
+                <i class="fas fa-shopping-cart"></i>           
+                <a href="#" class="minibasket-button__basketinfo">
+                    <span class="minibasket-button__valueinfo">Empty</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!--
+    <div id="app">
+            <contact-us></contact-us>
+    </div
+    >-->
+    
+</body>
+        <script>
+        var contactUs = {
+        template: `
+            <div>
+            <h1>Contact Us</h1>
+            <p>Please send an e-mail to:
+            {{ email }}</p>
+            </div>
+        `,
+        data: function () {
+        return {
+        email: 'info@mycompany.com'
+        }
+        },
+        };
+        
+        new Vue({
+        el: '#app',
+        components: {
+        'contact-us': contactUs
+        }
+        })
+        </script>
+</html>
