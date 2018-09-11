@@ -1,0 +1,20 @@
+.product{
+    @include fullwidth-grid;
+
+    .container{
+        @include primary-grid;
+        
+        .product__img-slider{
+            grid-column: span 5;
+
+        }
+
+        .product__info{
+            grid-column: span 7;
+        }
+
+        .product__subdata{
+            grid-column: 1 / -1;
+        }
+    }
+}

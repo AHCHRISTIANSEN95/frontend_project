@@ -1,0 +1,107 @@
+// GRID
+
+@mixin fullwidth-grid{
+    display: grid;
+    min-width: 100%;  
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr 1fr 1170px 1fr 1fr 1fr;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@mixin primary-grid{
+    display: grid;
+    max-width: 1170px;  
+    grid-column: 4 / 5;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+
+@mixin main-grid{
+    display: grid;
+    max-width: 100%;  
+    grid-column: 2 / 7;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+}
+
+@mixin fullwidth-3col-grid{
+    display: grid;
+    max-width: 100%;  
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 530px;
+    grid-column-gap: 30px;
+
+}
+
+@mixin bottom-nav-grid{
+    display: grid;
+    max-width: 1170px;  
+    grid-column: 4 / 5;
+    grid-column-gap: 30px;
+    grid-template-areas: 
+    "info why account look contact"
+    "promotion socialmedia"
+    "sub-footer"
+    ;
+}
+
+
+
+
+//buttons 
+@mixin primary-btn {
+    padding: 22px 32px;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 1px solid $font-color;
+    border-radius: 0px;
+    max-width: 345px;
+    font-size: 1.06rem; 
+    cursor: pointer;
+
+    &:hover {
+        background-color: $cta-color;
+        border: $cta-color;
+        color: $font-white;
+        transition: 0.4s ease;
+    }
+}
+
+@mixin banner-btn {
+    padding: 22px 32px;
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
+    max-width: 345px;
+    font-size: 1.06rem; 
+    cursor: pointer;
+    color: $font-color-inv;
+
+    &:hover {
+        background-color: $cta-color;
+        color: $font-white;
+        transition: 0.4s ease;
+    }
+}
+
+@mixin primary-r-btn {
+    padding: 10px;
+    background-color: $grey;
+    border: none;
+    border-radius: 32px;
+    max-width: 64px;
+    max-height: 64px;
+    font-size: 1.06rem; 
+    cursor: pointer;
+
+    &:hover {
+        background-color: $cta-color;
+        color: $font-white;
+        transition: 0.4s ease;
+    }
+}
+
+// FONT

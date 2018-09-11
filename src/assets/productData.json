@@ -1,0 +1,159 @@
+[
+	{
+		"id" : "1",
+		"productName" : "Bertoni Pants Slim fit",
+		"productImage" : "../assets/desktop/item6.png",
+		"productGallery" : null,
+		"quantity" : 10,
+		"description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
+		"price" : 2150,
+		"oldPrice" : 2995,
+		"onSale" : true,
+		"productCode": 54672,
+		"size": [
+			"XS",
+			"S",
+			"M",
+			"L",
+			"XL"
+		 ],
+		"colors": [
+			"Rusty",
+			"Dark",
+			"Light"
+		 ],
+		"categories": [
+			 "classic",
+			 "casual",
+			 "hoodies",
+			 "v-neck",
+			 "loose"
+		 ]
+},
+
+{
+    "id" : "1",
+    "productName" : "Bertoni Pants Slim fit",
+    "productImage" : "../assets/desktop/item2.png",
+    "productGallery" : null,
+    "quantity" : 10,
+    "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
+    "price" : 2150,
+    "oldPrice" : 2995,
+    "onSale" : true,
+    "productCode": 54672,
+    "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+     ],
+    "colors": [
+        "Rusty",
+        "Dark",
+        "Light"
+     ],
+    "categories": [
+         "classic",
+         "casual",
+         "hoodies",
+         "v-neck",
+         "loose"
+     ]
+},
+{
+    "id" : "1",
+    "productName" : "Bertoni Pants Slim fit",
+    "productImage" : "../assets/desktop/item3.png",
+    "productGallery" : null,
+    "quantity" : 10,
+    "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
+    "price" : 2150,
+    "oldPrice" : 2995,
+    "onSale" : true,
+    "productCode": 54672,
+    "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+     ],
+    "colors": [
+        "Rusty",
+        "Dark",
+        "Light"
+     ],
+    "categories": [
+         "classic",
+         "casual",
+         "hoodies",
+         "v-neck",
+         "loose"
+     ]
+},
+{
+    "id" : "1",
+    "productName" : "Bertoni Pants Slim fit",
+    "productImage" : "../assets/desktop/item4.png",
+    "productGallery" : null,
+    "quantity" : 10,
+    "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
+    "price" : 2150,
+    "oldPrice" : 2995,
+    "onSale" : true,
+    "productCode": 54672,
+    "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+     ],
+    "colors": [
+        "Rusty",
+        "Dark",
+        "Light"
+     ],
+    "categories": [
+         "classic",
+         "casual",
+         "hoodies",
+         "v-neck",
+         "loose"
+     ]
+},
+{
+    "id" : "1",
+    "productName" : "Bertoni Pants Slim fit",
+    "productImage" : "../assets/desktop/item5.png",
+    "productGallery" : null,
+    "quantity" : 10,
+    "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
+    "price" : 2150,
+    "oldPrice" : 2995,
+    "onSale" : true,
+    "productCode": 54672,
+    "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+     ],
+    "colors": [
+        "Rusty",
+        "Dark",
+        "Light"
+     ],
+    "categories": [
+         "classic",
+         "casual",
+         "hoodies",
+         "v-neck",
+         "loose"
+     ]
+}
+
+]

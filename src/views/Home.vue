@@ -1,18 +1,72 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- HEADER HERO SECTION START -->
+    <header class="header-hero">
+      <div class="header-hero__text">
+        <span>A  V  E</span>
+      </div>
+      <img src="../assets/desktop/hero.png" alt="" class="header-hero__image">
+      <button class="header-hero__button primary-btn">SHOP MEN's COLLECTION</button>
+    </header>
+    <!-- HEADER HERO SECTION END -->
+
+    
+    
+    <!-- MAIN SECTION START -->
+    <main class="main-container padding-b-60">
+      
+      <div class="main-grid">
+         <hr>
+          <div id="tabs" class="filter-tabs">
+            <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]" class="filter-tabs__link">POPULAR</a>
+            <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]" class="filter-tabs__link">NEW ARRIVALS</a>
+            <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]" class="filter-tabs__link">BEST SELLERS</a>
+            <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]" class="filter-tabs__link">SPECIAL OFFERS</a>
+            <a v-on:click="activetab=5" v-bind:class="[ activetab === 5 ? 'active' : '' ]" class="filter-tabs__link">COMIN SOON</a>
+          </div>
+      </div>
+        
+      <div class="content">
+        <div v-if="activetab === 1" class="tabcontent">
+          <ProductItem/>
+          <ProductItem/>
+          <ProductItem/>
+          <ProductItem/>
+          <ProductItem/>
+          <ProductItem/>
+        </div>
+      </div>        
+      
+    </main>
+    <!-- MAIN SECTION END -->
+    <LookBook/> <!-- LOOK BOOK SECTION IMPLMENTED -->
   </div>
 </template>
 
+
+<!-- STYLE FOR HOME.VUE -->
+<style lang="scss" scoped>
+
+
+</style>
+
+<!-- SCRIPT FOR HOME.VUE -->
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import LookBook from '@/components/LookBookSection.vue'
+import ProductItem from '@/components/ProductItem.vue'
 
 export default {
   name: 'home',
+  
   components: {
-    HelloWorld
+    LookBook, ProductItem
+  },
+  data(){
+    return {
+      activetab:1
+    };
   }
 }
+
 </script>

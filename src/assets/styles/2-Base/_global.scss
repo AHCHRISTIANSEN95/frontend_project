@@ -1,4 +1,52 @@
 // All basic style that are global such as html tag, anchor tag with different psdudo's and so on.
-html{
-    
+
+
+
+  
+
+// GLOBAL ELEMENTS
+ /* unvisited link */
+a:link {
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    text-decoration: none;
+} 
+
+
+
+
+
+// BUTTONS
+.primary-btn{
+    @include primary-btn;
+  }
+
+.banner-btn{
+@include banner-btn;
+}
+
+.primary-r-btn{
+    @include primary-r-btn;
+}
+
+//padding
+
+.padding-t-60{
+    padding-top:60px;
+}
+.padding-b-60{
+    padding-bottom:60px;
 }
