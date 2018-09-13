@@ -2,7 +2,6 @@
 .navigation {
     @include fullwidth-grid;
     grid-template-rows: 50px 1fr;
-    position: fixed;
     z-index: 999999;
 
 }
@@ -10,6 +9,9 @@
     @include fullwidth-grid;
     width: 100%;
     background: $darkgrey;
+    position: fixed;
+    top: 0;
+    z-index: 999999999999;
 }
 .top-banner{
     @include primary-grid;
@@ -17,7 +19,6 @@
     
     color: $font-color-inv;
     a{
-        color: $link-color;
         margin-right: 25px;
     }
 
@@ -25,6 +26,7 @@
         grid-column: 1 / 4;
         justify-self: left;
         align-self: center;
+        display: flex;
         p{
             padding-left:10px
         }
@@ -49,14 +51,25 @@
         grid-column: 11 / -1;
         justify-self: right;
         align-self: center;
+        background-color: $cta-color;
+        span{
+            color: $font-white;
+            i{margin-right:10px;}
+        }
+
+        &:hover{
+            opacity: 0.8;
+        }
     }
 }
 
 nav {
     @include fullwidth-grid;
     grid-row: 2 / 3;
-    
     list-style-type: none;
+    padding: 40px 0;
+    height: 50px;
+
     .navbar-brand{
         grid-column: 3 / 4;
         align-self: right;
@@ -71,12 +84,12 @@ nav {
             justify-self: right;
             li{
                 display: inline;
-                margin-left: 30px;
-                line-height: 31px;
+                padding-left: 30px;
+                line-height: 40px;
                     a{
                         text-transform: uppercase;
                         font-size: 13px;
-                        font-weight: 700;
+                        font-weight: 400;
                         text-decoration: none;
                         color: $font-color;
                         transition: 0.4s;
@@ -107,9 +120,8 @@ nav {
                     text-align: left;
 
                     
-                    p{
-                        font-size: 15px;
-                        font-weight: 700;
+                    strong{
+                        font-weight: $bold;
                     }
                                         
                     ul{
@@ -127,6 +139,7 @@ nav {
                 }
 
                 &:hover .menu-dropdown{
+                    z-index: 999999;
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-rows: repeat(2, 1fr);
@@ -198,6 +211,45 @@ nav {
 	}
 }
 
+//HEADER HERO
+
+.header-hero {
+    height: 450px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  
+    &__title {
+        color: $font-white;
+        margin-bottom: 50px;
+        font-size: 48px;
+        align-self: end;
+    }
+    &__subtitle {
+        color: $font-white;
+        font-size: 30px;
+        align-self: start;
+    }
+    img{
+        max-height: 450px;
+        object-fit: cover;
+        width: 100%;
+        position: relative;
+    
+    }
+    & .overlay {
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        display: grid;
+        color: $white-bg;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
 // BOTTOM MENU
 footer{
     @include fullwidth-grid;
@@ -270,7 +322,7 @@ footer{
             h3{
                 padding: 60px;
                 strong{
-                    font-weight: 700;
+                    font-weight: $bold;
                 }
                 font-weight: 300;
 

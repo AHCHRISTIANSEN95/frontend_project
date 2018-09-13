@@ -1,23 +1,31 @@
 <template>
-    <div  class="category-product">
-        <label for="price" class="category-product__price">888.9</label>
-        <img src="../assets/desktop/item1.png" alt="category product title" class="category-product__img">
-        <div class="category-product--hovered">
-            <div class="div category-product__thumbnail">
-                <img class="category-product__img--thumbnail" src="../assets/desktop/thumb-front.png" alt="category product image title">
-                <img class="category-product__img--thumbnail" src="../assets/desktop/thumb-back.png" alt="category product image title">
+    <div :key="id" class="product-item" >
+        
+        <label for="price" class="product-item__price"><span>&#163;</span>{{price}}</label>
+        <img :src="img" :alt="name" class="product-item__img">
+        <div class="product-item__thumbnail">
+                <img class="product-item__img--thumbnail" :src="thumb1" alt="thumbnail back">
+                <img class="product-item__img--thumbnail" :src="thumb2" alt="thumbnail front">
             </div>
-            <h3>PRODUCT TITLE</h3>
-            <p>Product description short about product</p>
-            <button class="category-product__button primary-r-btn"><a href="#"><i class="fas fa-shopping-cart"></i></a></button>
-            <button class="category-product__button primary-r-btn"><a href="#"><i class="far fa-heart"></i></a></button>
-            <button class="category-product__button primary-r-btn"><a href="#"><i class="far fa-compress-alt"></i></a></button>
+        <div class="product-item--hovered">
+            
+            <div class="product-item__content">
+                <h5>{{name}}</h5>
+                <p>{{productText}}</p>
+                <div class="product-item__buttons">
+                <button class="product-item__button primary-r-btn"><a href="#"><i class="fas fa-shopping-cart"></i></a></button>
+                <button class="product-item__button primary-r-btn"><a href="#"><i class="far fa-heart"></i></a></button>
+                <button class="product-item__button primary-r-btn"><a href=""><img height="25px" src="../assets/compare.svg.svg" alt=""></a></button>
+              </div>
+            </div>
         </div>
     </div>
 </template>
 
-<script>
+<script type="text/javascript">
 export default {
-    
-}
+  name: "ProductItem",
+  props: ["id","name", "price", "producttext", "img", "thumb1", "thumb2"]
+};
+
 </script>

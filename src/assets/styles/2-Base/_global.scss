@@ -5,27 +5,83 @@
   
 
 // GLOBAL ELEMENTS
+p {
+    font-family: $paragraph;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 300;
+    color: $font-color;
+}
+
+a {
+    text-decoration: none;
+    font-family: $paragraph;
+    font-size: 0.86rem;
+    font-weight: 300;
+    color: $font-color-inv;
+
+    &:hover {
+        color: $font-white;
+    }
+
+    &:link {
+        text-decoration: none;
+    }
+    
+    /* visited link */
+    &:visited {
+        text-decoration: none;
+    }
+    
+    /* mouse over link */
+    &:hover {
+        text-decoration: none;
+    }
+    
+    /* selected link */
+    &:active {
+        text-decoration: none;
+    } 
+    
+}
+
  /* unvisited link */
-a:link {
-    text-decoration: none;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading;
+    color: $font-color;
+    font-weight: 300;
+
+    strong{
+        font-weight: $bold;
+    }
 }
 
-/* visited link */
-a:visited {
-    text-decoration: none;
+h1 {
+    font-size: 3.2rem;
 }
 
-/* mouse over link */
-a:hover {
-    text-decoration: none;
+h2 {
+    font-size: 3.2rem;
 }
 
-/* selected link */
-a:active {
-    text-decoration: none;
-} 
+h3 {
+    font-size: 3.2rem;
+}
 
+h4 {
+    font-size: 2.4rem;
+}
 
+h5 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: $medium;
+}
+
+h6 {
+    font-size: 0.86rem;
+}
 
 
 

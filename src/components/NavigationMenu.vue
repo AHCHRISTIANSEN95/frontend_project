@@ -19,6 +19,11 @@
                     <button href="#" class="basket-button__basketinfo banner-btn">
                         <span class="basket-button__valueinfo"><i class="fas fa-shopping-cart"></i>Empty</span>
                     </button>
+                    <div class="basket-button__hovered">
+
+                    </div>
+
+                
                 </div>
             
             </div>
@@ -34,7 +39,7 @@
                             <a href=""><i class="fas fa-angle-down"></i><router-link to="#">Mens</router-link></a>
                             <div class="menu-dropdown">
                               <div class="menu-dropdown__casual">
-                                    <p>CASUAL</p>
+                                    <strong>CASUAL</strong>
                                     <ul class="menu-dropdown__items">
                                         <li class="menu-dropdown__items__links"><a href="#">Jackets</a></li>
                                         <li class="menu-dropdown__items__links"><a href="#">Hoodies &amp; Sweatshirts</a></li>
@@ -44,7 +49,7 @@
                                     </ul> 
                                 </div>
                                 <div class="menu-dropdown__formal">
-                                    <p>FORMAL</p>
+                                    <strong>FORMAL</strong>
                                     <ul class="menu-dropdown__items">
                                         <li class="menu-dropdown__items__links"><a href="#">Jackets</a></li>
                                         <li class="menu-dropdown__items__links"><a href="#">Shirts</a></li>
@@ -62,7 +67,7 @@
                             <a href=""><i class="fas fa-angle-down"></i><router-link to="#">Womens</router-link></a>
                             <div class="menu-dropdown">
                                 <div class="menu-dropdown__casual">
-                                    <p>CASUAL</p>
+                                    <strong>CASUAL</strong>
                                     <ul class="menu-dropdown__items">
                                         <li class="menu-dropdown__items__links"><a href="#">Jackets</a></li>
                                         <li class="menu-dropdown__items__links"><a href="#">Hoodies &amp; Sweatshirts</a></li>
@@ -72,7 +77,7 @@
                                     </ul> 
                                 </div>
                                 <div class="menu-dropdown__formal">
-                                    <p>FORMAL</p>
+                                    <strong>FORMAL</strong>
                                     <ul class="menu-dropdown__items">
                                         <li class="menu-dropdown__items__links"><a href="#">Jackets</a></li>
                                         <li class="menu-dropdown__items__links"><a href="#">Shirts</a></li>

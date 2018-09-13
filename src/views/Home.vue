@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <!-- HEADER HERO SECTION START -->
-    <header class="header-hero">
-      <div class="header-hero__text">
+    <header class="header-hero-home">
+      <div class="header-hero-home__text">
         <span>A  V  E</span>
       </div>
       <img src="../assets/desktop/hero.png" alt="" class="header-hero__image">
-      <button class="header-hero__button primary-btn">SHOP MEN's COLLECTION</button>
+      <button class="header-hero-home__button primary-btn">SHOP MEN's COLLECTION</button>
     </header>
     <!-- HEADER HERO SECTION END -->
 
@@ -28,12 +28,7 @@
         
       <div class="content">
         <div v-if="activetab === 1" class="tabcontent">
-          <ProductItem/>
-          <ProductItem/>
-          <ProductItem/>
-          <ProductItem/>
-          <ProductItem/>
-          <ProductItem/>
+            <ProductItem v-for="product in products" :key="product.id" v-on:click="updateSelected(product)" :price="product.price" :producttext="product.productText"  :name="product.productName" :img="product.productImage" :thumb1="product.productGallery[0]" :thumb2="product.productGallery[1]" ></ProductItem>
         </div>
       </div>        
       
@@ -56,6 +51,8 @@
 import LookBook from '@/components/LookBookSection.vue'
 import ProductItem from '@/components/ProductItem.vue'
 
+import axios from "axios";
+
 export default {
   name: 'home',
   
@@ -64,9 +61,26 @@ export default {
   },
   data(){
     return {
-      activetab:1
+      showProducts: false,
+      selectedProduct: {},
+      activetab:1,
+      products: null  
     };
+  },
+  mounted() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      axios
+        .get('productData.json')
+        .then(response => (this.products = response.data));
+    },
+    updateSelected (selectedItem) {
+        this.selectedProduct = selectedItem;
+        this.showProducts = true;
+     }
   }
-}
+  }
 
 </script>

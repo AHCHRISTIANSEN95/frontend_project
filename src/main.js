@@ -15,3 +15,31 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
+/*
+new Vue({
+  el: '#product',
+  data: {
+      json: null
+  },
+
+  created: function () {
+    fetch("../assets/productData.json")
+      .then(r => r.json())
+      .then(json => {
+        this.json=json;
+      });
+  }
+});
+
+
+import data from '../src/assets/productData.json'
+
+new Vue({
+  el: '#product',
+  data: function () {
+    return {
+        data        
+    }
+  }
+}).$mount('#product')
+*/

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Product from './views/Product.vue'
 import Register from './views/Register.vue'
+import Producttest from './views/Producttest.vue'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {
+    path: '/test',
+    name: 'test',
+    component: Producttest
     },
     {
       path: '/about',
