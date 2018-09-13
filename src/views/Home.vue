@@ -27,9 +27,7 @@
       </div>
         
       <div class="content">
-        <div v-if="activetab === 1" class="tabcontent">
-            <ProductItem v-for="product in products" :key="product.id" v-on:click="updateSelected(product)" :price="product.price" :producttext="product.productText"  :name="product.productName" :img="product.productImage" :thumb1="product.productGallery[0]" :thumb2="product.productGallery[1]" ></ProductItem>
-        </div>
+            <Products></Products>
       </div>        
       
     </main>
@@ -49,37 +47,20 @@
 <script>
 // @ is an alias to /src
 import LookBook from '@/components/LookBookSection.vue'
-import ProductItem from '@/components/ProductItem.vue'
+import Products from '@/components/ProductItem.vue'
 
-import axios from "axios";
+
 
 export default {
   name: 'home',
   
   components: {
-    LookBook, ProductItem
+    LookBook, Products
   },
   data(){
     return {
-      showProducts: false,
-      selectedProduct: {},
-      activetab:1,
-      products: null  
+      activetab:1
     };
-  },
-  mounted() {
-    this.getData();
-  },
-  methods: {
-    getData() {
-      axios
-        .get('productData.json')
-        .then(response => (this.products = response.data));
-    },
-    updateSelected (selectedItem) {
-        this.selectedProduct = selectedItem;
-        this.showProducts = true;
-     }
   }
   }
 

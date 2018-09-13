@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Product from './views/Product.vue'
 import Register from './views/Register.vue'
-import Producttest from './views/Producttest.vue'
 
 Vue.use(Router)
 
@@ -17,7 +16,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/product',
+      path: '/product/:id',
       name: 'product',
       component: Product
     },
@@ -26,11 +25,7 @@ export default new Router({
       name: 'register',
       component: Register
     },
-    {
-    path: '/test',
-    name: 'test',
-    component: Producttest
-    },
+    
     {
       path: '/about',
       name: 'about',

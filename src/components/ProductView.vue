@@ -1,5 +1,5 @@
 <template>
-<section class="product">
+<section v-if="product" class="product">
         <div class="container">
             <div class="product__img-slider">
 
@@ -134,14 +134,46 @@
     </section> 
 </template>
 <script>
-export default {
-  name: "ProductView",
-  props: ["id","name", "price", "oldprice", "producttext", "description", "fit", "material","delivery", "img"],
+import axios from "axios";
 
-  data() {
+export default {
+  name:'product item',
+data() {
     return {
         activetab:1,
-        index : 0,
+        product: null
+    }
+},
+
+mounted(){
+    this.getProductById();
+},
+
+methods:{
+    getProductById(){
+        let productId = this.$route.params.id;
+
+        axios
+        .get("/public/productdata.json")
+        .then(response => {
+        this.product = response.data.products.find(product => product.id === productId);
+        
+        })
+        .catch(error => console.log(error));
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+ 
+ /*        index : 0,
         images: [
             {
             src : 'img',
@@ -175,6 +207,6 @@ export default {
     prevSlide() {
       this.index--
     }
-  }
-};
+  }*/
+
 </script>
