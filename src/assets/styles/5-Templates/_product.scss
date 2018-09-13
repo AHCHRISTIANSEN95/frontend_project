@@ -49,6 +49,7 @@
                 display: flex;
                 p{
                     margin:15px 25px 15px 0;
+                    font-size: 1.2em;
                 }
                 &--old{
                     text-decoration: line-through;
@@ -79,8 +80,11 @@
             }
             .product__description{
                 margin: 15px 0;
-                p{
-                    line-height: 1.5em;
+                li{
+                    line-height: 0.8em;
+                    margin-left: 15px;
+                    color: $font-color
+
                 }
             }
 

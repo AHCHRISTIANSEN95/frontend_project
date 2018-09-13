@@ -29,7 +29,6 @@
       <div class="content">
             <Products></Products>
       </div>        
-      
     </main>
     <!-- MAIN SECTION END -->
     <LookBook/> <!-- LOOK BOOK SECTION IMPLMENTED -->

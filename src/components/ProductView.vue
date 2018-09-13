@@ -5,13 +5,13 @@
 
 
                     <div class="img-slider__item">
-                        <img :src="img" :alt="name" class="product__img">
+                        <img :src="product.productImage" :alt="product.productName" class="product__img">
                       <!--  <img :src="getCurrentImage.src" :alt="getCurrentImage.text" class="product__img">-->
                     </div>
               
                 <!-- Next and previous buttons -->
-                <button class="prev" @click="prevSlide" :disabled="index===0"><i class="fa fa-angle-left"></i></button>
-                <button class="next" @click="nextSlide" :disabled="index===images.length - 1"><i class="fa fa-angle-right"></i></button>
+                <button class="prev" ><i class="fa fa-angle-left"></i></button>
+                <button class="next" ><i class="fa fa-angle-right"></i></button>
                
 
                 <!-- imageslider
@@ -25,7 +25,7 @@
                 </div>  -->   
             </div>
             <div class="product__info">
-                <h2>{{name}}</h2>
+                <h2>{{product.productName}}</h2>
                 <div class="product__review">
                     <div class="product__review__stars">
                         <i class="fas fa-star"></i>
@@ -45,29 +45,29 @@
                     </ul>   
                 </div>
                 <div class="product__price">
-                    <p class="product__price--old"><span>&#163;</span>107</p>
-                    <p class="product__price--new"><span>&#163;</span>89,99</p>
+                    <p class="product__price--old"><span>&#163;</span>{{product.oldPrice}}</p>
+                    <p class="product__price--new"><span>&#163;</span>{{product.price}}</p>
                 </div>
                 <div class="product__details">
-                    <span><strong>Availablity:</strong>In stock</span>
-                    <span><strong>Product code:</strong>#45768</span>
+                    <span><strong>Availablity:</strong>{{product.quantity}}</span>
+                    <span><strong>Product code:</strong>#{{product.productCode}}</span>
                     <span>
                         <strong>Tags:</strong>
-                        <a href="#" class="tags">Classic</a>,
-                        <a href="#" class="tags">Casual</a>,
-                        <a href="#" class="tags">V-Neck</a>
+                        <a href="#" class="tags">{{product.categories[0]}}</a>,
+                        <a href="#" class="tags">{{product.categories[1]}}</a>,
+                        <a href="#" class="tags">{{product.categories[2]}}</a>
                     </span>
                 </div>
                 <div class="product__description">
-                    <p>{{producttext}}</p>
+                    <p>{{product.productText}}</p>
                     <br>
-                    <p>{{fit}}</p>
+                    <li>{{product.fit}}</li>
                     <br>
-                    <p>{{material}}</p>
+                    <li>{{product.material}}</li>
                     <br>
-                    <p>{{delivery}}</p>
+                    <li>{{product.delivery}}</li>
                     <br>
-                    <p>{{other}}</p>
+                    <li>{{product.other}}</li>
                     
                 </div>
                 <div class="product__select">
@@ -75,22 +75,22 @@
                         <label for="">COLOUR</label>
                         <select name="color" id="">
                             <option selected disabled value="0">Select Color</option>
-                            <option value="">Red</option>
-                            <option value="">Blue</option>
-                            <option value="">Black</option>
-                            <option value="">Green</option>
-                            <option value="">Purple</option>
+                            <option value="">{{product.colors[0]}}</option>
+                            <option value="">{{product.categories[1]}}</option>
+                            <option value="">{{product.categories[2]}}</option>
+                            <option value="">{{product.categories[3]}}</option>
+                            <option value="">{{product.categories[4]}}</option>
                         </select>
                     </div>
                     <div class="select__field">
                         <label for="">SIZE</label>
                         <select name="size" id="">
                             <option selected disabled value="0">Select Size</option>
-                            <option value="">XS</option>
-                            <option value="">S</option>
-                            <option value="">M</option>
-                            <option value="">L</option>
-                            <option value="">XL</option>
+                            <option value="">{{product.size[0]}}</option>
+                            <option value="">{{product.size[1]}}</option>
+                            <option value="">{{product.size[2]}}</option>
+                            <option value="">{{product.size[3]}}</option>
+                            <option value="">{{product.size[4]}}</option>
                         </select>
                     </div>
                     
@@ -121,8 +121,8 @@
                 </div>
                 <div class="product__subdata-content">
                     <div v-if="activetab === 1" class="product__tabs-category">
-                        <h4>{{name}}</h4>
-                        <p></p>
+                        <h4>{{product.productName}}</h4>
+                        <p>{{product.description}}</p>
                     </div>
                     <div v-if="activetab === 2" class="product__tabs-category">
                         <h4>Here goes the product video</h4>
@@ -137,12 +137,12 @@
 import axios from "axios";
 
 export default {
-  name:'product item',
-data() {
-    return {
-        activetab:1,
-        product: null
-    }
+  name:'productitem',
+    data() {
+        return {
+            activetab:1,
+            product: null
+    };
 },
 
 mounted(){
@@ -154,59 +154,15 @@ methods:{
         let productId = this.$route.params.id;
 
         axios
-        .get("/public/productdata.json")
+
+        .get("/productData.json")
         .then(response => {
-        this.product = response.data.products.find(product => product.id === productId);
-        
+        this.product = response.data.products.find(p => p.id === productId);
+        console.log(this.product);
         })
         .catch(error => console.log(error));
     }
-}
-}
-
-
-
-
-
-
-
-
-
- 
- /*        index : 0,
-        images: [
-            {
-            src : 'img',
-            text : 'some text',
-            },
-            {
-            src: 'img',
-            text: 'testing'
-            },
-            {
-            src: 'img',
-            text: 'lorem ipsum'
-            },
-            {
-            src: 'img',
-            text: 'heyoo'
-            },
-        ]
-    }
-  },
-  
-  computed: {
-    getCurrentImage() {
-      return this.images[this.index]
-    }
-  },
-  methods: {
-    nextSlide() {
-      this.index++
-    },
-    prevSlide() {
-      this.index--
-    }
-  }*/
+},
+} ;
 
 </script>
