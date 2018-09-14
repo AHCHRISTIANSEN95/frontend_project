@@ -58,7 +58,7 @@
         </div>
         <div class="cta-links padding-t-60 padding-b-60">
             <div class="promotion">
-                <h3><strong>AWARD WINNER</strong><br>FASHION AWARDS 2018</h3>
+                <h4><strong>AWARD WINNER</strong><br>FASHION AWARDS 2018</h4>
             </div>
             <div class="socialmedia-link">
                 <div class="icon-wrapper">
