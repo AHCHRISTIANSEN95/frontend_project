@@ -1,0 +1,133 @@
+.sign-up{
+    @include fullwidth-grid; 
+    
+      input{
+             grid-column: span 4;
+             margin-top:30px;
+         }
+ }
+ .sign-up__container {
+     @include primary-grid;
+ 
+     & input {
+         @include input;
+         
+     }
+     .signin {
+     
+         @include main-grid;
+         grid-column: 1 / span 6;
+         height: 200px;
+ 
+         &__button {
+             width: 155px;
+             grid-column: 1 / span 2;
+             margin-top:30px;
+         }
+ 
+         &__title {
+             text-transform: uppercase;
+             grid-column: 1 / span 4;
+             font-size: 1.125rem;
+             font-weight: 800;
+         }
+ 
+         &__email {
+             grid-column: 1 / span 4;
+         }
+ 
+         &__password {
+             grid-column: 1 / span 4;
+         }
+ 
+         &__forgot {
+             grid-column: 3 / span 2;
+             justify-self: end;
+             align-self: center;
+ 
+             a {
+                 margin-right: 5px;
+                 color: $cta-color;
+ 
+                 i{ color: $cta-color; margin-left:5px;}
+ 
+                 &:hover{
+                     color:$font-color ;
+                 }
+             }
+         }
+     }
+ 
+     .register {
+ 
+         @include main-grid;
+         grid-column: 7 / -1;
+         padding-left: 23px;
+         border-left: 1px solid $grey;
+       
+ 
+         &__title {
+             grid-column: 1 / span 4;
+             font-size: 1.125rem;
+             text-transform: uppercase;
+             font-weight: 800;
+         }
+         &__email {
+             grid-column: 1 / span 4;
+         }
+         &__password {
+             grid-column: 1 / span 4;
+         }
+         &__checkbox {
+         
+         }
+         &__account {
+             grid-column: 1 / span 4;
+             display: flex;
+             align-items: center;
+         }
+ 
+         &__button {
+             grid-column: 1 / span 2;
+         }
+ 
+         &__agree {
+             grid-column: 3 / span 2;
+             justify-content: center;
+             align-self: center;
+ 
+             a {
+                 margin-right: 5px;
+                 color: $cta-color;
+ 
+                 i{ color: $cta-color; margin-left:5px;}
+ 
+                 &:hover{
+                     color:$font-color ;
+                 }
+             }
+         }
+     }
+ }
+ 
+ 
+ //Reponsiv
+ @media  screen and (max-width: 750px) {
+     .sign-up__container { 
+         margin: 0 25px;
+         .register {
+             grid-column: 1 / span 12;
+             margin-top: 100px;
+             padding-left: 0px;
+             border: none;
+         }
+     
+         .signin {
+             grid-column: 1 / span 12;
+             margin-top: 62px;
+         }
+ 
+     }
+  
+ 
+ }

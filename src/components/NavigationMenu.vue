@@ -28,7 +28,7 @@
             
             </div>
         </div>
-        <nav class="navbar">
+        <nav id="navigation" class="navbar">
             
                 <div class="navbar-brand">
                     <router-link to="/"><img src="../assets/desktop/logo.png" alt="brand logo" class="brand-logo"></router-link>
@@ -108,6 +108,9 @@
                         <i class="fas fa-search"></i>
                     </form>
                 </div>
+                <button class="hamburger" v-on:click="openMenu">
+                    <i class="fas fa-bars hamburger"></i>
+                </button>
             
         </nav>
     </div>
@@ -116,4 +119,18 @@
 <style lang="scss">
 
 </style>
-
+<script>
+export default {
+  name: "NavigationMenu",
+  methods: {
+      openMenu: function() {
+          var menu = document.getElementById("navigation");
+     if (menu.className === "navbar") {
+        menu.className += " responsive";
+    } else {
+        menu.className = "navbar";
+    }
+  }
+}
+}
+</script>

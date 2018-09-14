@@ -28,8 +28,10 @@
         
       <div class="content">
             <Products></Products>
-      </div>        
+      </div>   
+           
     </main>
+    
     <!-- MAIN SECTION END -->
     <LookBook/> <!-- LOOK BOOK SECTION IMPLMENTED -->
   </div>

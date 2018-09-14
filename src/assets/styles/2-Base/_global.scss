@@ -106,3 +106,33 @@ h6 {
 .padding-b-60{
     padding-bottom:60px;
 }
+
+.hamburger {
+    display: none;
+}
+
+// Reponsive 
+@media screen and (max-width: 750px) {
+        .hamburger {
+            display: block;
+            grid-column: 11 / span 1;
+            z-index: 30;
+             width: 50px;
+              border: none;
+               background-color: transparent;
+        }
+
+        .navbar.responsive {
+            width: 100%;
+            background-color: #fff;
+            grid-column: 1 / span 12;
+            position: absolute;
+            height: 500px;
+            z-index: 30;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+    }

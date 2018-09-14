@@ -48,7 +48,14 @@
     ;
 }
 
+//input
 
+@mixin input {
+    border: 1px solid $grey;
+    padding-left: 13px;
+    height: 40px;
+    font-size: 1rem;
+}
 
 
 //buttons 

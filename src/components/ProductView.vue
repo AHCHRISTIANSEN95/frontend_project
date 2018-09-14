@@ -49,7 +49,7 @@
                     <p class="product__price--new"><span>&#163;</span>{{product.price}}</p>
                 </div>
                 <div class="product__details">
-                    <span><strong>Availablity:</strong>{{product.quantity}}</span>
+                    <span><strong>Availablity:</strong>{{product.quantity}} peices</span>
                     <span><strong>Product code:</strong>#{{product.productCode}}</span>
                     <span>
                         <strong>Tags:</strong>
@@ -158,9 +158,7 @@ methods:{
         .get("/productData.json")
         .then(response => {
         this.product = response.data.products.find(p => p.id === productId);
-        console.log(this.product);
         })
-        .catch(error => console.log(error));
     }
 },
 } ;
