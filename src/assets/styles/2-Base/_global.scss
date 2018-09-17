@@ -7,6 +7,10 @@ p {
     font-weight: 300;
     color: $font-color;
 }
+span, li, label{
+    font-family: $paragraph;
+    color: $font-color; 
+}
 
 a {
     text-decoration: none;
