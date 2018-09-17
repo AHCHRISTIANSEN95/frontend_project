@@ -1,0 +1,100 @@
+// BOTTOM MENU
+footer {
+    @include fullwidth-grid;
+    background-color: $white-bg;
+    .bottom-nav-wrapper {
+        grid-column: 4/5;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 30px;
+        .bottom-nav {
+            display: grid;
+            grid-column: 1 /-1;
+            grid-template-columns: repeat(5, 1fr);
+            .menu-list {
+                grid-column: span 1;
+                text-align: left;
+                .bottom-nav__list {
+                    padding-top: 30px;
+                    line-height: 1.5em;
+                    .contact-details {
+                        margin-bottom: 30px;
+                    }
+                    ul {
+                        list-style-type: none;
+                    }
+                    a {
+                        color: $font-color;
+                        text-decoration: none;
+                        text-transform: none;
+                        &:hover {
+                            color: $cta-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cta-links {
+        display: grid;
+        grid-column: 1 /-1;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        align-items: center;
+        font-size: 40px;
+        line-height: 40px;
+        .promotion {
+            grid-column: span 1;
+            background-color: $font-color;
+            color: $font-white;
+            height: 200px;
+            text-align: center;
+            h4 {
+                padding: 60px;
+                color: $font-white;
+                strong {
+                    font-weight: $bold;
+                }
+                font-weight: 300;
+            }
+        }
+        .socialmedia-link {
+            grid-column: span 1;
+            background-color: $cta-color;
+            height: 200px;
+            .icon-wrapper {
+                padding: 80px;
+                a {
+                    padding: 30px;
+                    i {
+                        color: $font-white;
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+    .sub-footer {
+        grid-column: 1 / -1;
+        background-color: $darkgrey;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 0 0 0;
+        p {
+            display: inline;
+            color: $font-color-inv;
+            &:nth-child(1) {
+                margin-left: 345px;
+            }
+            &:nth-child(2) {
+                padding-left: 500px;
+            }
+            &:nth-child(3) {
+                margin-right: 345px;
+            }
+        }
+    }
+}

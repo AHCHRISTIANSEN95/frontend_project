@@ -1,0 +1,36 @@
+//HEADER HERO
+.header-hero {
+    height: 450px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    &__title {
+        color: $font-white;
+        margin-bottom: 50px;
+        font-size: 48px;
+        align-self: end;
+    }
+    &__subtitle {
+        color: $font-white;
+        font-size: 30px;
+        align-self: start;
+    }
+    img {
+        max-height: 450px;
+        object-fit: cover;
+        width: 100%;
+        position: relative;
+    }
+    & .overlay {
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        display: grid;
+        color: $white-bg;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}

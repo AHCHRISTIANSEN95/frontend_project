@@ -1,0 +1,75 @@
+// HEADER SECTION START
+header {
+    width: 100%;
+    z-index: 99;
+    transition: 0.5s;
+}
+
+.header-hero-home {
+    background-color: #f8f8f8;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 548px;
+    background-position: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    &__text {
+        font-family: $paragraph;
+        height: 450px;
+        font-size: 450px;
+        font-weight: $bold;
+        color: $font-color;
+        position: absolute;
+        padding-top: 250px;
+        z-index: 1;
+        align-self: center;
+    }
+    &__image {
+        margin-left: 250px;
+    }
+    &__button {
+        position: absolute;
+        z-index: 5;
+        margin-top: 750px;
+        align-self: end;
+        margin-right: 325px;
+    }
+}
+
+// HEADER SECTION END
+// MAIN SECTION START
+.main-grid {
+    @include fullwidth-grid;
+    hr {
+        margin: 60px 0;
+        grid-column: 2 /7;
+        height: 1px;
+        color: $font-color-inv;
+        background-color: $font-color-inv;
+        border: none;
+        opacity: 0.2;
+    }
+}
+
+.filter-tabs {
+    grid-column: 2 /7;
+    align-items: left;
+    margin: 0 0 60px 0;
+    .filter-tabs__link {
+        margin-right: 60px;
+    }
+    a:hover {
+        color: $cta-color;
+        cursor: pointer;
+    }
+}
+
+// MAIN SECTION END
+.content {
+    @include fullwidth-grid;
+    .tabcontent {
+        @include main-grid;
+        grid-auto-rows: 100px;
+    }
+}
