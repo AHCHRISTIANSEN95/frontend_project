@@ -2,7 +2,7 @@
     <footer class="padding-t-60">
     <div class="bottom-nav-wrapper">
         <div class="bottom-nav">
-            <div class="menu-list">
+            <div class="menu-list"> 
                 <p>INFORMATION</p>
                 <ul class="bottom-nav__list">
                     <li class="bottom-nav__link"><a href="#">The brand</a></li>

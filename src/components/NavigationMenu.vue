@@ -101,7 +101,7 @@
                             <a href=""><i class="fas fa-angle-down"></i><router-link to="#">Look book</router-link></a>
                         </li>
                     </ul>
-                </div>
+                </div> 
                 <div class="search-bar">
                     <form class="search-bar__form" action="search" method="get">
                         <input id="search-product" type="search" name="search-product" value="" placeholder="Search" aria-label="Search" autocomplete="off" spellcheck="false">
