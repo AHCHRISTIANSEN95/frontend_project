@@ -1,68 +1,56 @@
-.brand-container{
+.brand-container {
     @include fullwidth-grid;
-
-    .brand{
+    .brand {
         @include primary-grid;
         grid-template-rows: repeat(4, 1fr);
         grid-row-gap: 0;
         margin: auto;
         margin-top: 65px;
         margin-bottom: 125px;
-    
         &__img-top {
             grid-column: 1 / span 6;
             grid-row: 1 / span 4;
             width: 100%;
             margin-bottom: 30px;
         }
-    
         &__content-top {
             grid-column: 7 / span 6;
             grid-row: 2 / span 2;
         }
-    
         &__img-right {
             grid-column: 7 / span 6;
             grid-row: 4 / span 4;
             width: 100%;
         }
-    
         &__img-left {
             grid-column: 1 / span 6;
             width: 100%;
             grid-row: 5 / span 4;
         }
-    
         &__content-right {
             grid-column: 7 / span 6;
             grid-row: 8 / span 2;
         }
-    
         &__content-left {
             grid-column: 1 / span 6;
             grid-row: 9 / span 2;
         }
-    
         &__awards {
             grid-column: 7 / span 6;
             grid-row: 10 / span 2;
             display: flex;
             justify-content: space-between;
         }
-    
         &__award {
             height: 100px;
             width: 100%;
             object-fit: contain;
         }
-    }
-    
-    //Reponsive
+    } //Reponsive
     @media screen and (max-width: 750px) {
         .brand {
             margin: 0px 25px;
             grid-template-rows: 1fr;
-    
             &__img,
             &__content,
             &__img2,
@@ -73,9 +61,9 @@
                 grid-column: 1 / span 12;
                 grid-row: auto;
             }
-    
             &__award {
                 flex-direction: column;
             }
-    }}
+        }
+    }
 }

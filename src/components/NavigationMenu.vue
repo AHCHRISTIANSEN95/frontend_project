@@ -12,8 +12,8 @@
                     </select>
                 </div>
                 <div class="user-option">
-                    <a href="#" class="user-option__register banner-btn">Register</a>
-                    <a href="#" class="user-option__login banner-btn">Sign In</a>
+                    <router-link to="/register"><a href="#" class="user-option__register banner-btn">Register</a></router-link>
+                    <router-link to="/register"><a href="#" class="user-option__login banner-btn">Sign In</a></router-link>
                 </div>
                 <div class="basket-button">        
                     <button href="#" class="basket-button__basketinfo banner-btn">

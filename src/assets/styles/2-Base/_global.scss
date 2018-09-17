@@ -1,9 +1,4 @@
-// All basic style that are global such as html tag, anchor tag with different psdudo's and so on.
-
-
-
-  
-
+// All basic style that are global such as html tag, anchor tag, p tag, fonts, with different psdudo's and so on.
 // GLOBAL ELEMENTS
 p {
     font-family: $paragraph;
@@ -19,40 +14,36 @@ a {
     font-size: 0.86rem;
     font-weight: 300;
     color: $font-color-inv;
-
     &:hover {
         color: $font-white;
     }
-
     &:link {
         text-decoration: none;
     }
-    
     /* visited link */
     &:visited {
         text-decoration: none;
     }
-    
     /* mouse over link */
     &:hover {
         text-decoration: none;
     }
-    
     /* selected link */
     &:active {
         text-decoration: none;
-    } 
-    
+    }
 }
 
- /* unvisited link */
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $heading;
     color: $font-color;
     font-weight: 300;
-
-    strong{
+    strong {
         font-weight: $bold;
     }
 }
@@ -83,56 +74,28 @@ h6 {
     font-size: 0.86rem;
 }
 
-
-
 // BUTTONS
-.primary-btn{
+.primary-btn {
     @include primary-btn;
-  }
-
-.banner-btn{
-@include banner-btn;
 }
 
-.primary-r-btn{
+.banner-btn {
+    @include banner-btn;
+}
+
+.primary-r-btn {
     @include primary-r-btn;
 }
 
 //padding
-
-.padding-t-60{
-    padding-top:60px;
+.padding-t-60 {
+    padding-top: 60px;
 }
-.padding-b-60{
-    padding-bottom:60px;
+
+.padding-b-60 {
+    padding-bottom: 60px;
 }
 
 .hamburger {
     display: none;
 }
-
-// Reponsive 
-@media screen and (max-width: 750px) {
-        .hamburger {
-            display: block;
-            grid-column: 11 / span 1;
-            z-index: 30;
-             width: 50px;
-              border: none;
-               background-color: transparent;
-        }
-
-        .navbar.responsive {
-            width: 100%;
-            background-color: #fff;
-            grid-column: 1 / span 12;
-            position: absolute;
-            height: 500px;
-            z-index: 30;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-        }
-    }

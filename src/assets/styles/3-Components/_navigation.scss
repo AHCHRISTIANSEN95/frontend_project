@@ -3,9 +3,9 @@
     @include fullwidth-grid;
     grid-template-rows: 50px 1fr;
     z-index: 999999;
-
 }
-.top-banner-container{
+
+.top-banner-container {
     @include fullwidth-grid;
     width: 100%;
     background: $darkgrey;
@@ -13,51 +13,48 @@
     top: 0;
     z-index: 999999999999;
 }
-.top-banner{
-    @include primary-grid;
 
-    
+.top-banner {
+    @include primary-grid;
     color: $font-color-inv;
-    a{
+    a {
         margin-right: 25px;
     }
-
-    .currency-dropdown{
+    .currency-dropdown {
         grid-column: 1 / 4;
         justify-self: left;
         align-self: center;
         display: flex;
-        p{
-            padding-left:10px
+        p {
+            padding-left: 10px
         }
-        select{
-          background-color: transparent;
-          border: none;
-          color: $font-color-inv;
-
+        select {
+            background-color: transparent;
+            border: none;
+            color: $font-color-inv;
         }
         select {
             border: none;
             background-color: transparent;
         }
     }
-    .user-option{
+    .user-option {
         grid-column: 6 / 11;
         justify-self: right;
         align-self: center;
     }
-
-    .basket-button{
+    .basket-button {
         grid-column: 11 / -1;
         justify-self: right;
         align-self: center;
         background-color: $cta-color;
-        span{
+        span {
             color: $font-white;
-            i{margin-right:10px;}
+            i {
+                margin-right: 10px;
+            }
         }
-
-        &:hover{
+        &:hover {
             opacity: 0.8;
         }
     }
@@ -69,97 +66,78 @@ nav {
     list-style-type: none;
     padding: 40px 0;
     height: 50px;
-
-    .navbar-brand{
+    .navbar-brand {
         grid-column: 3 / 4;
         align-self: right;
     }
-
-    .navbar-menu{
+    .navbar-menu {
         @include primary-grid;
-
         list-style-type: none;
-        .navbar-menu__items{
+        .navbar-menu__items {
             grid-column: 7 / -1;
             justify-self: right;
-            li{
+            li {
                 display: inline;
                 padding-left: 30px;
                 line-height: 40px;
-                    a{
-                        text-transform: uppercase;
-                        font-size: 13px;
-                        font-weight: 400;
-                        text-decoration: none;
-                        color: $font-color;
-                        transition: 0.4s;
-    
-                    &:hover{
+                a {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: $font-color;
+                    transition: 0.4s;
+                    &:hover {
                         color: $cta-color;
                     }
                 }
-            }           
-       
-            .navbar-menu__items__links{
+            }
+            .navbar-menu__items__links {
                 justify-self: right;
-                align-self: center;     
+                align-self: center;
                 .fa-angle-down {
                     position: absolute;
                     margin-top: 27px;
                     z-index: 1;
-                    }
-
-                
-                .menu-dropdown{
+                }
+                .menu-dropdown {
                     display: none;
                     position: absolute;
-                    width:470px;
+                    width: 470px;
                     padding-top: 18px;
                     box-shadow: 0 17px 24px #00000024;
                     background-color: $white-bg;
                     text-align: left;
-
-                    
-                    strong{
+                    strong {
                         font-weight: $bold;
                     }
-                                        
-                    ul{
+                    ul {
                         list-style-type: none;
-                        li{
+                        li {
                             display: grid;
                             margin-left: 0;
-                            a{
+                            a {
                                 font-weight: 400;
                             }
                         }
                     }
-                    
-                    
                 }
-
-                &:hover .menu-dropdown{
+                &:hover .menu-dropdown {
                     z-index: 999999;
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-rows: repeat(2, 1fr);
-                    grid-template-areas: 
-                        "c f"
-                        "p p";
-                  
-
-                    .menu-dropdown__casual{
+                    grid-template-areas: "c f" "p p";
+                    .menu-dropdown__casual {
                         grid-area: c;
                         display: inline-block;
                         padding-left: 30px;
                     }
-                    
-                    .menu-dropdown__formal{
+                    .menu-dropdown__formal {
                         grid-area: f;
                         display: inline-block;
                         padding-left: 30px;
                     }
-
                     .promotion {
                         grid-area: p;
                         height: 150px;
@@ -169,211 +147,37 @@ nav {
                         background-color: $darkgrey;
                         margin: 0 30px 20px 30px;
                         display: inline-block;
-                        padding-top:75px;
+                        padding-top: 75px;
                         text-align: center;
-    
-                            .promotion__heading{
-                                font-size: 40px;
-                                line-height: 40px;
-                                
-                            }
+                        .promotion__heading {
+                            font-size: 40px;
+                            line-height: 40px;
                         }
+                    }
                 }
             }
         }
     }
-
-    .search-bar{
+    .search-bar {
         grid-column: 6 / 7;
         align-self: left;
-        .search-bar__form{
-            
-            #search-product{
+        .search-bar__form {
+            #search-product {
                 padding: 5px 10px;
             }
-
-            .fa-search{
+            .fa-search {
                 position: absolute;
                 margin-left: -25px;
                 margin-top: 5px;
                 z-index: 1;
                 color: $font-color;
             }
-        
-        }   
+        }
     }
 }
-
 
 .navbar-brand {
-	img{
-		width: 170px;
-	}
-}
-
-//HEADER HERO
-
-.header-hero {
-    height: 450px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-  
-    &__title {
-        color: $font-white;
-        margin-bottom: 50px;
-        font-size: 48px;
-        align-self: end;
+    img {
+        width: 170px;
     }
-    &__subtitle {
-        color: $font-white;
-        font-size: 30px;
-        align-self: start;
-    }
-    img{
-        max-height: 450px;
-        object-fit: cover;
-        width: 100%;
-        position: relative;
-    
-    }
-    & .overlay {
-        position: absolute;
-        width: 100%;
-        height: inherit;
-        display: grid;
-        color: $white-bg;
-        background: rgba(0, 0, 0, 0.6);
-    }
-}
-// BOTTOM MENU
-footer{
-    @include fullwidth-grid;
-    background-color: $white-bg;
-
-    .bottom-nav-wrapper{
-    grid-column: 4/5;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-auto-rows: auto;
-    grid-gap: 30px;
-    
-    
-    .bottom-nav {
-        display: grid;
-        grid-column: 1 /-1;
-        grid-template-columns: repeat(5, 1fr);
-        
-    
-        .menu-list{
-            grid-column: span 1;
-            text-align: left;
-            
-            .bottom-nav__list{
-                padding-top: 30px;
-                line-height: 1.5em;
-                .contact-details{
-                    margin-bottom: 30px;
-                }
-
-                ul {
-                    list-style-type: none;
-                   
-                  }
-                  
-                  a {
-                    color:$font-color;
-                    text-decoration: none;
-                    text-transform: none;
-
-                    &:hover {
-                        color: $cta-color;
-                    }
-                    
-                }
-            }
-        }
-    
-        
-      }
-    }
-
-    .cta-links{
-        display: grid;
-        grid-column: 1 /-1;
-        grid-template-columns: 
-        
-        repeat(2, 1fr);
-        grid-column-gap: 30px;
-        align-items: center; 
-        font-size: 40px;
-        line-height: 40px;
-       
-
-        .promotion{
-            grid-column: span 1;
-            background-color: $font-color;
-            color: $font-white;
-            height: 200px;
-            text-align:center;
-            h4{
-                padding: 60px;
-                color:$font-white;
-                strong{
-                    font-weight: $bold;
-                }
-                font-weight: 300;
-
-            }
-        }
-        .socialmedia-link{
-            grid-column: span 1;
-            background-color: $cta-color;
-            height: 200px;
-
-            .icon-wrapper{
-                padding: 80px;
-            
-            a{
-                padding: 30px;
-                i{
-                    color: $font-white;
-                    font-size:2.4rem;
-                    }
-                }
-            }    
-        }
-    }
-
-    .sub-footer{
-        grid-column: 1 / -1;
-        background-color: $darkgrey;
-        width: 100%;
-        height: 30px;
-        display: flex;
-        justify-content: space-around;
-        padding: 15px 0 0 0;
-
-        p{
-            display: inline;  
-            color: $font-color-inv;
-            &:nth-child(1){
-                margin-left: 345px;
-            }
-            &:nth-child(2){
-                padding-left: 500px;
-            }
-            &:nth-child(3){
-                margin-right: 345px;
-            }
-        }
-
-       
-      
-    }
-
 }

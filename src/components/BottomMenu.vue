@@ -5,7 +5,7 @@
             <div class="menu-list">
                 <p>INFORMATION</p>
                 <ul class="bottom-nav__list">
-                    <li class="bottom-nav__link"><a href="#">The brand</a></li>
+                    <li class="bottom-nav__link"><router-link to="/brand"><a href="#">The brand</a></router-link></li>
                     <li class="bottom-nav__link"><a href="#">Local stores</a></li>
                     <li class="bottom-nav__link"><a href="#">Customer service</a></li>
                     <li class="bottom-nav__link"><a href="#">Privacy & cokies</a></li>
@@ -18,15 +18,15 @@
                     <li class="bottom-nav__link"><a href="#">Shipping & returns</a></li>
                     <li class="bottom-nav__link"><a href="#">Secure shopping</a></li>
                     <li class="bottom-nav__link"><a href="#">Testimonials</a></li>
-                    <li class="bottom-nav__link"><a href="#">Award winning</a></li>
-                    <li class="bottom-nav__link"><a href="#">Ethical trading</a></li>
+                    <li class="bottom-nav__link"><router-link to="/brand"><a href="#">Award winning</a></router-link></li>
+                    <li class="bottom-nav__link"><router-link to="/brand"><a href="#">Ethical trading</a></router-link></li>
                 </ul>
             </div>
             <div class="menu-list">
                 <p>YOUR ACCOUNT</p>
                 <ul class="bottom-nav__list">
-                    <li class="bottom-nav__link"><a href="#">Sign in</a></li>
-                    <li class="bottom-nav__link"><a href="#">Register</a></li>
+                    <li class="bottom-nav__link"><router-link to="/register"><a href="#">Sign in</a></router-link></li>
+                    <li class="bottom-nav__link"><router-link to="/register"><a href="#">Register</a></router-link></li>
                     <li class="bottom-nav__link"><a href="#">View Cart</a></li>
                     <li class="bottom-nav__link"><a href="#">View your Lookbook</a></li>
                     <li class="bottom-nav__link"><a href="#">Track an order</a></li>
