@@ -3,7 +3,7 @@
         {
             "id" : "1",
             "productName" : "Bertoni Pants Slim fit",
-            "productImage" : "./images/desktop/item1.png",
+            "productImage" : "/images/desktop/item1.png",
             "productGallery" : ["./images/desktop/thumb-back.png","./images/desktop/thumb-front.png"],
             "quantity" : 10,
             "productText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
@@ -40,7 +40,7 @@
         {
             "id" : "2",
             "productName" : "Bertoni Pants Slim fit",
-            "productImage" : "./images/desktop/item2.png",
+            "productImage" : "/images/desktop/item2.png",
             "productGallery" : ["./images/desktop/thumb-back.png","./images/desktop/thumb-front.png"],
             "quantity" : 10,
             "productText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
@@ -76,7 +76,7 @@
         {
             "id" : "3",
             "productName" : "Bertoni Pants Loose fit",
-            "productImage" : "./images/desktop/item3.png",
+            "productImage" : "/images/desktop/item3.png",
             "productGallery" : ["./images/desktop/thumb-back.png","./images/desktop/thumb-front.png"],
             "quantity" : 10,
             "productText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
@@ -112,7 +112,7 @@
         {
             "id" : "4",
             "productName" : "Bertoni Pants Slim fit",
-            "productImage" : "./images/desktop/item4.png",
+            "productImage" : "/images/desktop/item4.png",
             "productGallery" : ["./images/desktop/thumb-back.png","./images/desktop/thumb-front.png"],
             "quantity" : 10,
             "productText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
@@ -148,7 +148,7 @@
         {
             "id" : "5",
             "productName" : "Bertoni Pants Regular fit",
-            "productImage" : "./images/desktop/item5.png",
+            "productImage" : "/images/desktop/item5.png",
             "productGallery" : ["./images/desktop/thumb-back.png","./images/desktop/thumb-front.png"],
             "quantity" : 10,
             "productText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
@@ -184,7 +184,7 @@
         {
             "id" : "6",
             "productName" : "Bertoni Pants Slim fit",
-            "productImage" : "./images/desktop/item6.png",
+            "productImage" : "/images/desktop/item6.png",
             "productGallery" : ["./images/desktop/thumb-back.png","./images/desktop/thumb-front.png"],
             "quantity" : 10,
             "productText" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ab, cum animi facere nobis placeat",
