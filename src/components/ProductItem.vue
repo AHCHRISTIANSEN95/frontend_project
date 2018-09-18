@@ -29,7 +29,7 @@
 </template>
 
 <script type="text/javascript">
-import axios from "axios";
+import axios from "axios"; //axios, a promise-based HTTP client.
 
 export default {
     data(){
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     getData() {
-      axios
+      axios //axios, a promise-based HTTP client.
         .get('/productData.json')
         .then(response => (this.products = response.data.products))
         .finally();

@@ -12,17 +12,7 @@
                 <!-- Next and previous buttons -->
                 <button class="prev" ><i class="fa fa-angle-left"></i></button>
                 <button class="next" ><i class="fa fa-angle-right"></i></button>
-               
-
-                <!-- imageslider
-                <div class="img-slider__item">
-                    <img src="../assets/desktop/item1.png" alt="" class="product__img">
-                </div> 
                 
-                <div class="arrows">
-                    <div class="icon arrow arrow-left"><i class="fa fa-angle-left"></i></div>
-                    <div class="icon arrow arrow-right"><i class="fa fa-angle-right"></i></div>
-                </div>  -->   
             </div>
             <div class="product__info">
                 <h2>{{product.productName}}</h2>
@@ -134,7 +124,7 @@
     </section> 
 </template>
 <script>
-import axios from "axios";
+import axios from "axios"; //axios, a promise-based HTTP client.
 
 export default {
   name:'productitem',
@@ -153,8 +143,7 @@ methods:{
     getProductById(){
         let productId = this.$route.params.id;
 
-        axios
-
+        axios //axios, a promise-based HTTP client.
         .get("/productData.json")
         .then(response => {
         this.product = response.data.products.find(p => p.id === productId);
