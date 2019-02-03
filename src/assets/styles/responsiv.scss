@@ -273,6 +273,22 @@
         }
     }
 
+
+  // FONTS
+  @mixin blue--text {
+    color: $primary-color;
+    font-size: 1.4rem;
+  }
+  
+  @mixin intro__title {
+    padding: $title--padding;
+  }
+  
+  @mixin intro__text {
+    padding: $text--padding;
+  }
+  
+
     //BRAND PAGE
     .brand-container {
         display: block;
